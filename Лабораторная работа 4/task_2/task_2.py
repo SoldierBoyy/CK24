@@ -9,6 +9,7 @@ newline = '\n'
 delimeter_csv = ','
 indent = 4
 
+
 def task() -> None:
     with open(INPUT_FILENAME, "r", newline=newline) as input_file:
         reader = csv.DictReader(input_file, delimiter=delimeter_csv)
@@ -16,8 +17,6 @@ def task() -> None:
 
         with open(OUTPUT_FILENAME, "w") as output_f:
             json.dump(reader_data, output_f, indent=indent)
-
-
 
 
 if __name__ == '__main__':
