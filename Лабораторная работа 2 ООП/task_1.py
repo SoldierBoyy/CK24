@@ -15,16 +15,39 @@ BOOKS_DATABASE = [
 # TODO написать класс Book
 class Book:
     def __init__(self, id_: int, name: str, pages: int):
+        """
+        Создание объекта Book.
+        :param id_: Уникальный идентификатор
+        :param name: Название
+        :param pages: Страницы
+
+        Примеры:
+        >>> book = Book(1, "test_name", 300) # инициализация экземпляра класса
+        """
         self.id_ = id_
         self.name = name
         self.pages = pages
 
     def __str__(self):
-
+        """
+        Метод для получения строкового представления книги
+        :return: Строковое представление книги
+        Примеры:
+        >>> book = Book(1, "test_name", 300)
+        >>> str(book)
+        'Книга "test_name"'
+        """
         return f'Книга "{self.name}"'
 
     def __repr__(self):
-
+        """
+        Метод для получения подробного представления книги
+        :return: Строковое представление экземпляра класса Book
+        Примеры:
+        >>> book = Book(1, "test_name", 300)
+        >>> repr(book)
+        "Book(id_=1, name='test_name', pages=300)"
+        """
         return f'Book(id_={self.id_}, name={self.name!r}, pages={self.pages})'
 
 
